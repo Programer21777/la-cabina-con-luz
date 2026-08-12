@@ -73,10 +73,11 @@ const notes = [
   },
   {
     category: "Comunidad",
-    title: "El talento local ya tiene un nuevo escaparate",
+    title: "El talento deportivo local ya tiene un nuevo escaparate",
     excerpt:
-      "Emprendedores, artistas y colectivos podrán compartir su trabajo con una audiencia de la región.",
-    image: "/images/fotografo.jpg",
+      "Proyectos de la comunidad encuentran un espacio para compartir su identidad, sus ideas y su pasión.",
+    image: "/images/smirplay-logo.jpg",
+    imageClass: "logo-card-image",
     time: "Lun 10",
     tone: "blue",
   },
@@ -116,10 +117,16 @@ export default function Home() {
 
       <header className="site-header">
         <div className="shell masthead">
-          <a className="wordmark" href="#inicio" aria-label="La Cabina con Luz, inicio">
-            <span className="wordmark-signal" aria-hidden="true" />
-            <span className="wordmark-main">LA CABINA</span>
-            <span className="wordmark-sub">CON LUZ</span>
+          <a className="brand-lockup" href="#inicio" aria-label="La Cabina con Luz, inicio">
+            <img
+              className="brand-logo"
+              src="/images/la-cabina-logo.jpeg"
+              alt="Logo oficial de La Cabina con Luz"
+            />
+            <span className="brand-lockup-copy">
+              <strong>La Cabina con Luz</strong>
+              <small>Noticias · Fotos · Ciudad</small>
+            </span>
           </a>
 
           <p className="brand-line">Noticias, fotos y voces<br />conectadas a la ciudad.</p>
@@ -246,7 +253,12 @@ export default function Home() {
             {filteredNotes.map((note, index) => (
               <article className="story-card" key={note.title} id={note.category === "Ciudad" ? "ciudad" : undefined}>
                 <a className="card-image" href="#contacto" aria-label={note.title}>
-                  <img src={note.image} alt="" loading={index < 3 ? "eager" : "lazy"} />
+                  <img
+                    className={note.imageClass ?? ""}
+                    src={note.image}
+                    alt=""
+                    loading={index < 3 ? "eager" : "lazy"}
+                  />
                   <span className={`category-tag ${note.tone}`}>{note.category}</span>
                   <span className="card-arrow" aria-hidden="true">↗</span>
                 </a>
@@ -305,6 +317,9 @@ export default function Home() {
         <div className="team-grid">
           <article className="team-card team-blue">
             <span className="team-index">01</span>
+            <div className="team-logo team-logo-cabina" aria-hidden="true">
+              <img src="/images/la-cabina-logo.jpeg" alt="" />
+            </div>
             <div>
               <p className="kicker kicker-light">La conversación</p>
               <h3>La Cabina<br />con Luz</h3>
@@ -314,6 +329,9 @@ export default function Home() {
           </article>
           <article className="team-card team-red">
             <span className="team-index">02</span>
+            <div className="team-logo team-logo-carmona" aria-hidden="true">
+              <img src="/images/carmona-pics-logo.png" alt="" />
+            </div>
             <div>
               <p className="kicker kicker-light">La imagen</p>
               <h3>Carmona<br />Pics</h3>
@@ -356,10 +374,9 @@ export default function Home() {
       <footer className="footer" id="contacto">
         <div className="shell footer-main">
           <div>
-            <a className="wordmark wordmark-footer" href="#inicio">
-              <span className="wordmark-signal" aria-hidden="true" />
-              <span className="wordmark-main">LA CABINA</span>
-              <span className="wordmark-sub">CON LUZ</span>
+            <a className="footer-brand" href="#inicio" aria-label="La Cabina con Luz, inicio">
+              <img src="/images/la-cabina-logo.jpeg" alt="Logo oficial de La Cabina con Luz" />
+              <span>La Cabina<br />con Luz</span>
             </a>
             <p>Noticias, fotos y voces conectadas a la ciudad.</p>
           </div>

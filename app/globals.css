@@ -128,6 +128,52 @@ img {
   gap: 36px;
 }
 
+.brand-lockup {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 5px 5px 0 var(--red);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.brand-lockup:hover .brand-logo {
+  transform: rotate(-3deg) translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--blue);
+}
+
+.brand-lockup-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brand-lockup-copy strong {
+  max-width: 205px;
+  font-size: 1.35rem;
+  font-weight: 950;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.brand-lockup-copy small {
+  color: var(--red);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .wordmark {
   position: relative;
   width: max-content;
@@ -664,6 +710,15 @@ img {
   filter: saturate(1.14);
 }
 
+.card-image img.logo-card-image,
+.story-card:hover .card-image img.logo-card-image {
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+  filter: saturate(1.04) contrast(1.03);
+  transform: none;
+}
+
 .category-tag {
   position: absolute;
   z-index: 2;
@@ -835,12 +890,53 @@ img {
 }
 
 .team-card {
+  position: relative;
+  overflow: hidden;
   min-height: 430px;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 34px;
   padding: 46px;
   color: var(--white);
+}
+
+.team-logo {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 0;
+  width: 112px;
+  height: 112px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 7px 7px 0 rgba(7, 20, 65, 0.32);
+  transform: rotate(3deg);
+}
+
+.team-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.team-logo-cabina {
+  border-radius: 50%;
+}
+
+.team-logo-cabina img {
+  object-fit: cover;
+}
+
+.team-logo-carmona img {
+  transform: scale(1.35);
+}
+
+.team-card > div:last-child,
+.team-index {
+  position: relative;
+  z-index: 1;
 }
 
 .team-blue { background: var(--blue); }
@@ -987,6 +1083,30 @@ img {
   line-height: 1.6;
 }
 
+.footer-brand {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-brand img {
+  width: 108px;
+  height: 108px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.footer-brand span {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1080,6 +1200,20 @@ img {
 
   .masthead .socials {
     display: none;
+  }
+
+  .brand-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .brand-lockup-copy strong {
+    max-width: 150px;
+    font-size: 1.05rem;
+  }
+
+  .brand-lockup-copy small {
+    font-size: 0.48rem;
   }
 
   .header-cta {
@@ -1215,6 +1349,26 @@ img {
     min-height: 92px;
   }
 
+  .brand-lockup {
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 58px;
+    height: 58px;
+    border-width: 2px;
+    box-shadow: 3px 3px 0 var(--red);
+  }
+
+  .brand-lockup-copy strong {
+    max-width: 105px;
+    font-size: 0.82rem;
+  }
+
+  .brand-lockup-copy small {
+    display: none;
+  }
+
   .wordmark-signal {
     width: 13px;
     height: 13px;
@@ -1306,6 +1460,13 @@ img {
     min-height: 420px;
     gap: 18px;
     padding: 32px 24px;
+  }
+
+  .team-logo {
+    top: 24px;
+    right: 22px;
+    width: 82px;
+    height: 82px;
   }
 
   .advertise {

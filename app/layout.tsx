@@ -24,6 +24,10 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       "Noticias locales, entretenimiento, cultura y fotografía con La Cabina con Luz y Carmona Pics.",
     applicationName: "La Cabina con Luz",
+    icons: {
+      icon: "/images/la-cabina-logo.jpeg",
+      apple: "/images/la-cabina-logo.jpeg",
+    },
     keywords: [
       "La Cabina con Luz",
       "noticias locales",
