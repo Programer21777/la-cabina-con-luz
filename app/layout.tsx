@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol =
     requestHeaders.get("x-forwarded-proto") ??
     (host.includes("localhost") ? "http" : "https");
-  const socialImage = `${protocol}://${host}/og.png`;
+  const socialImage = `${protocol}://${host}/og.jpg`;
 
   return {
     title: "La Cabina con Luz | Noticias, fotos y voces de la ciudad",
@@ -46,8 +46,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: socialImage,
-          width: 1732,
-          height: 909,
+          width: 1200,
+          height: 630,
           alt: "La Cabina con Luz — Noticias, fotos y ciudad",
         },
       ],

@@ -4,7 +4,9 @@ Sitio editorial de noticias, entretenimiento y fotografía para **La Cabina con 
 
 ## Sitio publicado
 
-[la-cabina-con-luz.hernandezmemir.chatgpt.site](https://la-cabina-con-luz.hernandezmemir.chatgpt.site)
+[la-cabina-con-luz.vercel.app](https://la-cabina-con-luz.vercel.app)
+
+Código fuente: [github.com/Programer21777/la-cabina-con-luz](https://github.com/Programer21777/la-cabina-con-luz)
 
 ## Características
 
@@ -39,7 +41,7 @@ npm run build
 - `app/globals.css`: identidad visual y diseño adaptable.
 - `app/layout.tsx`: metadatos y tarjeta social.
 - `public/images/`: fotografías demostrativas.
-- `public/og.png`: imagen para compartir en redes.
+- `public/og.jpg`: imagen optimizada para compartir en redes.
 
 Las notas y fotografías actuales funcionan como contenido de demostración y pueden sustituirse por material editorial real.
 
